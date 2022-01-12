@@ -1,0 +1,126 @@
+:root {
+  --primary-soft-blue: hsl(231, 69%, 60%);
+  --primary-soft-red: hsl(0, 94%, 66%);
+  --neutral-grayish-blue: hsl(229, 8%, 60%);
+  --neutral-very-dark-blue: hsl(229, 31%, 21%);
+}
+.cadastroform-bg {
+  background: rgb(21, 17, 88);
+  background: linear-gradient(
+    90deg,
+    rgb(77, 37, 143) 0%,
+    rgba(79, 79, 203, 1) 46%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  bottom: 0;
+}
+.form-container-cadastro {
+  background-color: white;
+  width: 90%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  animation: animatecadastro 1s;
+}
+.cadastro-form-img-wrapper {
+  width: 100px;
+  margin: 0 auto;
+}
+.cadastro-form-img-wrapper img {
+  width: 100%;
+}
+.form-container-cadastro h1 {
+  text-align: center;
+  padding: 1rem;
+  color: rgb(54, 54, 54);
+}
+.form-container-cadastro h4 {
+  text-align: center;
+  color: var(--primary-soft-red);
+  transition: all 0.3s;
+}
+.form-container-cadastro input {
+  padding: 10px;
+  margin: 1rem 0;
+  width: 100%;
+  height: 100%;
+  color: #595f6e;
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 1rem;
+  outline: none;
+}
+.cadastro-input-form-nome {
+  max-width: 150px;
+}
+.cadastro-input-form-sobrenome {
+  max-width: 220px;
+  float: right;
+}
+cadastro-input-form-email {
+  max-width: 230px;
+  float: right;
+}
+.form-container-cadastro button {
+  padding: 1rem 0;
+  background: var(--neutral-very-dark-blue);
+  color: white;
+  border: none;
+  border-radius: 2px;
+  font-size: 1.4rem;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  margin: 2rem 0;
+
+  transition: all 0.3s;
+}
+.form-container-cadastro button:hover {
+  background: var(--neutral-very-dark-blue);
+  letter-spacing: 3px;
+  transform: scale(1.1);
+}
+.form-container-cadastro p {
+  text-align: center;
+  padding: 10px 0;
+}
+.error-cadastro-input {
+  border-bottom: 1px solid red !important;
+  transition: all 0.3s;
+}
+.error-cadastro-input::placeholder {
+  color: var(--primary-soft-red);
+}
+.cadastro-error-msg-hidden {
+  opacity: 0;
+}
+.form-container-cadastro a {
+  color: var(--primary-soft-blue);
+  cursor: pointer;
+}
+@keyframes animatecadastro {
+  0% {
+    left: -20%;
+    opacity: 0;
+  }
+  50% {
+    left: 52%;
+    opacity: 1;
+  }
+  60% {
+    left: 52%;
+  }
+  100% {
+    left: 50%;
+  }
+}

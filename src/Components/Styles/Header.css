@@ -1,0 +1,235 @@
+:root {
+  --primary-soft-blue: hsl(231, 69%, 60%);
+  --primary-soft-red: hsl(0, 94%, 66%);
+  --neutral-grayish-blue: hsl(229, 8%, 60%);
+  --neutral-very-dark-blue: rgb(37, 43, 70);
+}
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+header {
+  top: 0;
+  position: sticky;
+  z-index: 999;
+  background-color: rgba(249, 249, 249, 0.98);
+}
+.header-wrapper {
+  max-width: 2000px;
+  height: 60px;
+  padding: 0 6rem;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+.logo-wrapper img {
+  width: 200px;
+  align-self: center;
+}
+.header-items {
+  display: flex;
+  align-items: center;
+}
+a:active,
+a:focus,
+a:visited,
+a {
+  text-decoration: none;
+  color: rgb(82, 82, 82);
+  transition: all 0.2s;
+}
+.header-item {
+  margin: 0 2rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+a:hover {
+  color: var(--primary-soft-red);
+}
+.hamburger {
+  font-size: 2rem;
+  display: none;
+  color: black;
+}
+.header-item-login-btn {
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: var(--primary-soft-red);
+  letter-spacing: 2px;
+  color: white;
+  border: 2px solid var(--primary-soft-red);
+  padding: 0.6rem 2rem;
+  transition: all 0.2s;
+}
+.header-item-login-btn:hover {
+  background-color: transparent;
+  color: var(--neutral-very-dark-blue);
+}
+.user-img-container {
+  position: relative;
+  width: 180px;
+  display: flex;
+  justify-content: center;
+}
+.user-img-header {
+  width: 50px;
+  cursor: pointer;
+}
+.user-img-click-menu {
+  background-color: var(--neutral-very-dark-blue);
+  width: 100%;
+  height: 180px;
+  margin-top: -5px;
+  z-index: -1;
+  position: absolute;
+  border-radius: 0 0 15px 15px;
+  animation: 0.3s user-menu;
+}
+.user-img-click-menu p {
+  color: white;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 40%;
+}
+.user-img-menu-button {
+  position: absolute;
+  top: 60%;
+  width: 80%;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: var(--primary-soft-red);
+  letter-spacing: 2px;
+  color: white;
+  border: 2px solid var(--primary-soft-red);
+  padding: 0.6rem 2rem;
+  transition: all 0.2s;
+  transform: translate(12%, 0%);
+}
+.user-img-menu-button:hover {
+  background-color: transparent;
+}
+@keyframes user-menu {
+  from {
+    margin-top: -30px;
+    opacity: 0;
+  }
+  to {
+    margin-top: -5px;
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 960px) {
+  .header-item {
+    position: relative;
+  }
+  .img-logo-white {
+    display: block;
+  }
+  .header-items {
+    opacity: 0;
+    display: none;
+    width: 100%;
+    padding-top: 6rem;
+    min-height: 100vh;
+    background-color: rgba(37, 43, 70, 0.95);
+  }
+  .header-item-login-btn:hover {
+    background-color: white;
+    color: rgb(32, 32, 32);
+    border: 2px solid var(--neutral-very-dark-blue);
+  }
+  .header-items.activeHeader {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    opacity: 1;
+    left: 0;
+    top: 0;
+  }
+  .user-img-container {
+    margin: 0 auto;
+  }
+  .user-img-header {
+    width: 50px;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .user-img-click-menu {
+    background-color: whitesmoke;
+    width: 100%;
+    height: 180px;
+    z-index: 1;
+    border-radius: 5px;
+  }
+  .user-img-click-menu p {
+    color: black;
+  }
+  .user-img-menu-button {
+    position: relative;
+    top: 60%;
+    width: 60% !important;
+    border: 2px solid var(--primary-soft-red) !important;
+    background-color: var(--primary-soft-red) !important;
+    transform: translate(0%, 0%);
+  }
+  .user-img-menu-button:hover {
+    background-color: transparent !important;
+    color: var(--neutral-very-dark-blue) !important;
+  }
+
+  .header-item {
+    text-align: center;
+    padding: 1.5rem 0;
+    border-top: 1px solid hsl(230, 18%, 33%);
+    width: 80%;
+  }
+  a {
+    color: white !important;
+    letter-spacing: 3px;
+  }
+  a:hover {
+    color: var(--primary-soft-red) !important;
+  }
+  .header-item button {
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 0.6rem 0;
+    width: 100%;
+  }
+
+  .logo-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(25%, 30%);
+    z-index: 1;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 50%);
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .fa-times {
+    color: white;
+    transition: all 0.3s;
+  }
+}
+@media screen and (max-width: 350px) {
+  .logo-wrapper {
+    margin-left: -1.5rem;
+  }
+}

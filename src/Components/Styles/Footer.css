@@ -1,0 +1,221 @@
+:root {
+  --primary-soft-blue: hsl(231, 69%, 60%);
+  --primary-soft-red: hsl(0, 94%, 66%);
+  --neutral-grayish-blue: hsl(229, 8%, 60%);
+  --neutral-very-dark-blue: hsl(229, 31%, 21%);
+}
+.footer-container {
+  background-color: var(--primary-soft-blue);
+  color: white;
+  height: 100%;
+}
+.footer-texts-container {
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  margin: 0 auto;
+}
+.footer-texts-container p {
+  letter-spacing: 5px;
+  font-weight: 700;
+}
+.footer-texts-container h2 {
+  margin-top: 3rem;
+  font-size: 2.5rem;
+}
+.footer-texts-container form {
+  margin-top: 3rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.footer-texts-container input {
+  padding: 0 8rem 0 1rem;
+  height: 54px;
+  color: var(--neutral-grayish-blue);
+  border: 2px solid white;
+  border-radius: 5px;
+  margin-right: 1.5rem;
+  outline: none;
+  z-index: 10;
+}
+
+.footer-submit-btn {
+  background-color: var(--primary-soft-red);
+  color: white;
+  border: 2px solid var(--primary-soft-red);
+  padding: 0 2rem;
+  height: 54px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  font-weight: 700;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: all 0.2s;
+}
+.footer-submit-btn:hover {
+  background-color: white;
+  color: var(--primary-soft-red);
+}
+.footer-texts-container input::placeholder {
+  color: var(--neutral-grayish-blue);
+  font-weight: 700;
+  opacity: 0.5;
+}
+.footest {
+  background-color: var(--neutral-very-dark-blue);
+  margin-top: 5rem;
+}
+.footest-container {
+  display: flex;
+  padding: 2.5rem 0;
+  max-width: 1500px;
+  width: 90%;
+  margin: 0 auto;
+  align-items: center;
+  position: relative;
+}
+.footest-nav-container {
+  display: flex;
+  margin-left: 5rem;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
+.footest-img-logo-wrapper svg {
+  transform: scale(1.2);
+}
+.footest-nav-item {
+  margin: 0 2rem;
+}
+.footest-nav-item span {
+  color: rgb(184, 184, 184);
+  transition: all 0.2s;
+}
+.footest-nav-item span:hover {
+  color: var(--primary-soft-red);
+}
+.footest-social-container {
+  float: right;
+  display: flex;
+  right: 0;
+  position: absolute;
+}
+.footest-social-item {
+  margin: 0 2rem;
+  font-size: 2rem;
+}
+.footest-social-item i {
+  color: white;
+  transition: all 0.2s;
+}
+.footest-social-item i:hover {
+  color: var(--primary-soft-red);
+}
+.num-span {
+  animation: counter 5s forwards ease;
+  counter-reset: num1 var(--num1);
+}
+.num-span::after {
+  content: counter(num1);
+}
+.footer-form-container {
+  position: relative;
+}
+.erro-text {
+  margin: 15px 0 -5px 0;
+  background-color: var(--primary-soft-red);
+  color: white;
+  font-size: 1rem;
+  width: 62.75%;
+  padding: 0.5rem 0 0.5rem 2rem;
+  border-radius: 0 0 5px 5px;
+  text-align: left;
+  position: absolute;
+  left: 0;
+  bottom: -28px;
+  z-index: 9;
+  transition: all 0.3s;
+}
+.footer-hidden {
+  opacity: 0;
+  transition: all 0.3s;
+}
+.footer-red-border {
+  border-color: var(--primary-soft-red) !important;
+}
+
+@property --num1 {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+@keyframes counter {
+  from {
+    --num1: 0;
+  }
+  to {
+    --num1: 35000;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .footest-nav-container {
+    margin-left: 4rem;
+    font-size: 1rem;
+  }
+  .footest-nav-item {
+    margin: 0 1rem;
+  }
+  .footest-social-item {
+    margin: 0 1rem;
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .footest-container {
+    flex-direction: column;
+  }
+  .footest-img-logo-wrapper {
+    padding-bottom: 1rem;
+  }
+  .footest-nav-container {
+    flex-direction: column;
+    text-align: center;
+    margin-left: 0;
+    letter-spacing: 2px;
+  }
+  .footest-nav-item {
+    margin: 1rem 0;
+  }
+  .footest-social-container {
+    margin-top: 2rem;
+    position: relative;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .footer-texts-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-texts-container input {
+    width: 100%;
+    height: 50px;
+  }
+  .footer-texts-container button {
+    height: 50px;
+    margin-top: 1.5rem;
+    letter-spacing: 1px;
+  }
+  .footer-texts-container h2 {
+    font-size: 2.3rem;
+  }
+  .footer-texts-container input {
+    margin-right: 0;
+  }
+}
