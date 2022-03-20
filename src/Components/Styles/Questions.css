@@ -1,13 +1,6 @@
-:root {
-  --primary-soft-blue: hsl(231, 69%, 60%);
-  --primary-soft-red: hsl(0, 94%, 66%);
-  --neutral-grayish-blue: hsl(229, 8%, 60%);
-  --neutral-very-dark-blue: hsl(229, 31%, 21%);
-}
 .questions-section {
   width: 50%;
   max-width: 800px;
-  height: 650px;
   padding-top: 2rem;
   margin: 10rem auto;
 }
