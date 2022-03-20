@@ -1,11 +1,8 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import "./Styles/Header.css";
-import { UserContext } from "../UserContext";
 
 function Header() {
-  const {contextValue} = useContext(UserContext);
-
   const [click, setClick] = useState(false);
   const [clickUser, setClickUser] = useState(false);
 
@@ -25,12 +22,12 @@ function Header() {
   });
   wsize = window.innerWidth;
 
-  const closeNav = () => {  
+  const closeNav = () => {
     setClick(false);
   };
   const reload = () => {
     window.location.reload();
-  }
+  };
 
   return (
     <header>
@@ -70,22 +67,6 @@ function Header() {
               <Link to="#contact" onClick={handleClick}>
                 CONTATO
               </Link>
-            </li>
-            <li className="header-item">
-
-            {contextValue.nome == null ?
-              <Link to="/login">
-                <button className="header-item-login-btn" onClick={handleClick}>ENTRAR</button>
-              </Link>
-            : (<div className="user-img-container">
-                {clickUser && <div className="user-img-click-menu">
-                  <p>{contextValue.nome}</p>
-                  <button className="user-img-menu-button" onClick={reload}>Sair</button>
-                </div>}
-                <img className="user-img-header" alt={contextValue.nome} src="./images/user.png" onClick={handleMenuClick}/>
-              </div>)
-            }
-
             </li>
           </ul>
         </div>
