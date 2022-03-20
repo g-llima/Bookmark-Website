@@ -1,25 +1,19 @@
-:root {
-  --primary-soft-blue: hsl(231, 69%, 60%);
-  --primary-soft-red: hsl(0, 94%, 66%);
-  --neutral-grayish-blue: hsl(229, 8%, 60%);
-  --neutral-very-dark-blue: hsl(229, 31%, 21%);
-}
-.features-container {
+.features {
   text-align: center;
   padding-top: 8rem;
   height: 800px;
 }
-.features-texts-container h2 {
+.features__texts h2 {
   font-size: 2rem;
   color: var(--neutral-very-dark-blue);
 }
-.bookmark-img-wrapper {
+.features__change__content__imgWrapper {
   width: 400px;
 }
-.bookmark-img-wrapper img {
+.features__change__content__imgWrapper img {
   width: 100%;
 }
-.features-texts-container p {
+.features__texts p {
   padding-top: 2rem;
   font-size: 1.3rem;
   width: 35%;
@@ -27,14 +21,14 @@
   color: var(--neutral-grayish-blue);
   margin: 0 auto;
 }
-.features-list-container {
+.features__change {
   margin: 5rem 0;
 }
-.features-list {
+.features__change__items {
   display: flex;
   justify-content: center;
 }
-.features-list-item {
+.features__change__items__item {
   padding: 25px;
   width: 250px;
   font-size: 1.2rem;
@@ -45,7 +39,7 @@
   cursor: pointer;
   transition: all 0.2s;
 }
-.features-list-item:hover {
+.features__change__items__item:hover {
   color: var(--primary-soft-red);
 }
 .active {
@@ -53,29 +47,29 @@
   position: relative;
   position: relative;
 }
-.features-bookmark-container {
+.features__change__content {
   width: 90%;
   max-width: 1400px;
   margin: 5rem auto;
   justify-content: space-evenly;
   display: flex;
 }
-.bookmark-texts-container {
+.features__change__content__texts {
   max-width: 500px;
   text-align: left;
 }
-.bookmark-texts-container h2 {
+.features__change__content__texts h2 {
   font-size: 2rem;
   color: var(--neutral-very-dark-blue);
 }
-.bookmark-texts-container p {
+.features__change__content__texts p {
   margin: 2rem 0;
   color: var(--neutral-grayish-blue);
   font-size: 1.3rem;
   line-height: 30px;
   height: 150px;
 }
-.features-add-btn {
+.features__change__content__texts__addBTN {
   cursor: pointer;
   border-radius: 5px;
   font-size: 16px;
@@ -88,7 +82,7 @@
   transition: all 0.2s;
   padding: 1.2rem 2rem;
 }
-.features-add-btn:hover {
+.features__change__content__texts__addBTN:hover {
   background-color: white;
   color: var(--primary-soft-blue);
   border: 2px solid var(--primary-soft-blue);
@@ -103,48 +97,28 @@
   display: block;
   position: absolute;
 }
-.revealFeatures {
-  position: relative;
-  transform: translateY(150px);
-  opacity: 0;
-  transition: all 1s ease;
-}
-.revealFeaturesImg {
-  position: relative;
-  transform: translateX(-300px);
-  opacity: 0;
-  transition: all 1s ease;
-}
-.activeShow {
-  transform: translateY(0);
-  opacity: 1;
-}
-.activeShowImg {
-  transform: translateX(0);
-  opacity: 1;
-}
 
 @media only screen and (max-width: 1024px) {
-  .features-container {
+  .features {
     height: 1200px;
   }
-  .features-texts-container p {
+  .features__texts p {
     width: 80%;
   }
-  .features-list-container {
+  .features__change {
     margin: 2rem 0;
   }
-  .features-list {
+  .features__change__items {
     flex-direction: column;
   }
-  .bookmark-img-wrapper {
+  .features__change__content__imgWrapper {
     width: 100%;
     padding-bottom: 3rem;
   }
-  .features-bookmark-container {
+  .features__change__content {
     display: grid;
   }
-  .bookmark-texts-container {
+  .features__change__content__texts {
     text-align: center;
   }
   .active::after {
@@ -154,15 +128,15 @@
   }
 }
 @media only screen and (max-width: 425px) {
-  .features-texts-container p {
+  .features__texts p {
     font-size: 1.2rem;
     line-height: 25px;
     width: 85%;
   }
-  .features-list-item {
+  .features__change__items__item {
     width: 100%;
   }
-  .bookmark-texts-container p {
+  .features__change__content__texts p {
     width: 280px;
     font-size: 1.2rem;
   }
