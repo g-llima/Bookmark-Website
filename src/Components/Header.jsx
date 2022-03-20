@@ -2,38 +2,37 @@ import React, { useState } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import "./Styles/Header.css";
 
+const headerItems = [
+  {
+    link: "#features",
+    text: "RECURSOS",
+  },
+  {
+    link: "#download",
+    text: "DOWNLOAD",
+  },
+  {
+    link: "#contact",
+    text: "CONTATO",
+  },
+];
+
 function Header() {
-  const [click, setClick] = useState(false);
-  const [clickUser, setClickUser] = useState(false);
+  const [click, setClick] = useState(false); // CLICK TRUE = OPEN MOBILE NAV
 
-  const handleClick = () => {
-    setClick(!click);
-  };
-  const handleMenuClick = () => {
-    setClickUser(!clickUser);
-  };
+  let wsize = window.innerWidth;
 
-  let wsize;
   window.addEventListener("resize", () => {
-    if (click) {
-      setClick(false);
-    }
+    click && setClick(false);
     wsize = window.innerWidth;
   });
-  wsize = window.innerWidth;
-
-  const closeNav = () => {
-    setClick(false);
-  };
-  const reload = () => {
-    window.location.reload();
-  };
 
   return (
-    <header>
-      <div className="header-wrapper">
-        <div className="logo-wrapper">
-          <Link to="/#" onClick={closeNav}>
+    <header className="header">
+      <div className="header__content">
+        {/* LOGO IMG */}
+        <div className="header__content__logo">
+          <Link to="/#" onClick={() => setClick(false)}>
             <img
               src={
                 click && wsize <= 1024
@@ -44,30 +43,31 @@ function Header() {
             />
           </Link>
         </div>
-        <div>
-          <div className="hamburger" onClick={handleClick}>
+
+        <div className="header__content__items">
+          {/* MOBILE NAVBAR HAMBURGUER */}
+          <div
+            className="header__content__items__hamburger"
+            onClick={() => setClick(!click)}
+          >
             <i className={click ? "fas fa-times" : "fas fa-bars"} />
           </div>
 
           <ul
-            id="header-items-id"
-            className={click ? "header-items activeHeader" : "header-items"}
+            className={`header__content__items__container 
+              ${click ? "activeHeader" : null}`}
           >
-            <li className="header-item">
-              <Link to="#features" onClick={handleClick}>
-                RECURSOS
-              </Link>
-            </li>
-            <li className="header-item">
-              <Link to="#download" onClick={handleClick}>
-                DOWNLOAD
-              </Link>
-            </li>
-            <li className="header-item">
-              <Link to="#contact" onClick={handleClick}>
-                CONTATO
-              </Link>
-            </li>
+            {/* HEADER ITEMS */}
+            {headerItems.map((item, index) => (
+              <li
+                className="header__content__items__container__item"
+                key={index}
+              >
+                <Link to={item.link} onClick={() => setClick(!click)}>
+                  {item.text}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

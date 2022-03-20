@@ -16,3 +16,15 @@
 html {
   scroll-behavior: smooth;
 }
+
+a:active,
+a:focus,
+a:visited,
+a {
+  text-decoration: none;
+  color: rgb(82, 82, 82);
+  transition: all 0.2s;
+}
+a:hover {
+  color: var(--primary-soft-red);
+}
