@@ -1,10 +1,4 @@
-:root {
-  --primary-soft-blue: hsl(231, 69%, 60%);
-  --primary-soft-red: hsl(0, 94%, 66%);
-  --neutral-grayish-blue: hsl(229, 8%, 60%);
-  --neutral-very-dark-blue: hsl(229, 31%, 21%);
-}
-.section-container {
+.hero {
   display: flex;
   max-width: 1800px;
   padding: 0 6rem;
@@ -12,12 +6,12 @@
   align-items: center;
   position: relative;
 }
-.texts-container h1 {
+.hero__texts h1 {
   color: var(--neutral-very-dark-blue);
   font-size: calc(2.9rem + 1.8vw);
   width: 95%;
 }
-.texts-container p {
+.hero__texts p {
   margin-top: 1rem;
   font-size: calc(1rem + 0.5vw);
   line-height: 30px;
@@ -25,11 +19,11 @@
   width: 100%;
   max-width: 800px;
 }
-.img-wrapper {
+.hero__img__wrapper {
   width: calc(480px + 10vw);
   position: relative;
 }
-.img-wrapper img {
+.hero__img__wrapper img {
   width: 100%;
 }
 .text-container-btns {
@@ -72,11 +66,11 @@
   color: rgb(59, 59, 59);
 }
 @media only screen and (max-width: 1217px) {
-  .text-container-btns {
+  .hero__texts__btns {
     display: flex;
     flex-direction: column;
   }
-  .img-wrapper {
+  .hero__img__wrapper {
     width: calc(700px + 10vw);
   }
   .firefox-btn {
@@ -85,43 +79,43 @@
   }
 }
 @media only screen and (max-width: 1024px) {
-  .section-container {
+  .hero {
     display: grid;
     padding: 0;
     width: 100%;
     margin-top: 4rem;
   }
-  .texts-container {
+  .hero__texts {
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .texts-container h1 {
+  .hero__texts h1 {
     padding-bottom: 1rem;
     font-size: calc(1.5rem + 3vw);
     text-align: center;
   }
-  .texts-container p {
+  .hero__texts p {
     padding-bottom: 1rem;
     font-size: calc(1rem + 1vw);
     line-height: calc(16px + 4vw);
     text-align: center;
     max-width: 80%;
   }
-  .img-wrapper {
+  .hero__img__wrapper {
     grid-row: 1/2;
     width: 320px;
     margin: 0 auto;
   }
-  .text-container-btns {
+  .hero__texts__btns {
     padding-top: 2rem;
     margin: 0 auto;
   }
 }
 @media only screen and (max-width: 425px) {
-  .texts-container p {
+  .hero__texts p {
     font-size: 1.2rem;
   }
 }

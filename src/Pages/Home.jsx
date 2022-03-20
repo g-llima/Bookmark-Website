@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../Components/Header";
-import PageStart from "../Components/PageStart";
+import Hero from "../Components/Hero";
 import Features from "../Components/Features";
 import Extensions from "../Components/Extensions";
 import Questions from "../Components/Questions";
@@ -9,7 +9,6 @@ import { motion } from "framer-motion";
 import "aos/dist/aos.css";
 
 function Home() {
-
   return (
     <>
       <motion.div
@@ -18,7 +17,7 @@ function Home() {
         exit={{ opacity: 0 }}
       >
         <Header />
-        <PageStart />
+        <Hero />
         <Features />
         <Extensions />
         <Questions />
