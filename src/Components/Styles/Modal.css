@@ -9,7 +9,7 @@
   justify-content: center;
   align-items: center;
 }
-.modalContainer {
+.modal {
   width: 85%;
   max-width: 400px;
   border-radius: 5px;
@@ -21,34 +21,34 @@
   padding: 0 3rem 3rem 3rem;
   animation: 0.3s animateModal;
 }
-.modal-title {
+.modal__title {
   text-align: center;
   color: rgb(36, 36, 36);
   letter-spacing: 5px;
   margin: 0 0 1rem 0;
 }
-.modal-logo {
+.modal__logo {
   width: 50px;
   display: flex;
   margin: 2rem auto;
 }
-.modal-logo img {
+.modal__logo img {
   width: 100%;
 }
-.modal-body {
+.modal__body {
   width: 100%;
   margin: 1rem auto;
   font-size: 1.2rem;
   color: var(--neutral-grayish-blue);
   text-align: center;
 }
-.modal-footer {
+.modal__footer {
   margin-top: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.modal-footer button {
+.modal__footer button {
   padding: 10px 3rem;
   background-color: var(--primary-soft-blue);
   color: white;
@@ -59,19 +59,19 @@
   box-shadow: rgba(83, 104, 223, 0.5) 0px 2px 5px;
   transition: all 0.2s;
 }
-.modal-footer button:hover {
+.modal__footer button:hover {
   letter-spacing: 3px;
   transform: scale(1.05);
 }
-.modal-cancel-btn {
+.modal__footer__cancelBTN {
   background-color: var(--primary-soft-red);
 }
 @media only screen and (max-width: 375px) {
-  .modal-body {
+  .modal__body {
     width: 100%;
     font-size: 0.8rem;
   }
-  .modal-title {
+  .modal__title {
     font-size: 0.6rem;
   }
 }

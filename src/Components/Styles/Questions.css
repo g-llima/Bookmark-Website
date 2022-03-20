@@ -1,23 +1,23 @@
-.questions-section {
+.questions {
   width: 50%;
   max-width: 800px;
   padding-top: 2rem;
   margin: 10rem auto;
 }
-.questions-texts-container {
+.questions__content {
   text-align: center;
 }
-.questions-texts-container h2 {
+.questions__content h2 {
   font-size: 2rem;
   color: var(--neutral-very-dark-blue);
 }
-.question-header-text {
+.questions__content__header {
   margin: 2rem 0;
   color: var(--neutral-grayish-blue);
   font-size: 1.2rem;
   line-height: 30px;
 }
-.question-container button {
+.questions__content__item button {
   width: 100%;
   padding: 1.3rem 0;
   background: none;
@@ -28,15 +28,15 @@
   cursor: pointer;
   transition: all 0.2s;
 }
-.question-container button:hover {
+.questions__content__item button:hover {
   color: var(--primary-soft-red);
 }
-.button-container {
+.questions__content__item__btn {
   display: flex;
   align-items: center;
   position: relative;
 }
-.button-container i {
+.questions__content__item__btn i {
   margin-right: 2rem;
   font-size: 1.2rem;
   color: var(--primary-soft-blue);
@@ -44,7 +44,7 @@
   right: 0;
   z-index: -1;
 }
-.question-text {
+.questions__content__item__text {
   font-size: 1.2rem;
   color: var(--neutral-grayish-blue);
   line-height: 30px;
@@ -61,7 +61,7 @@
 .red {
   color: rgb(236, 78, 78) !important;
 }
-.questions-add-btn {
+.questions__moreInfo__addBTN {
   cursor: pointer;
   border-radius: 5px;
   font-size: 16px;
@@ -75,52 +75,52 @@
   padding: 1.2rem 2rem;
   margin-top: 1rem;
 }
-.questions-add-btn:hover {
+.questions__moreInfo__addBTN:hover {
   background-color: white;
   color: var(--primary-soft-blue);
   border: 2px solid var(--primary-soft-blue);
 }
-.moreInfo {
+.questions__moreInfo {
   width: 150px;
   margin: 0 auto;
   justify-content: center;
 }
 @media only screen and (max-width: 900px) {
-  .questions-section {
+  .questions {
     height: 750px;
   }
 }
 @media only screen and (max-width: 800px) {
-  .question-container button {
+  .questions__content__item button {
     font-size: 1rem;
   }
-  .question-text {
+  .questions__content__item__text {
     font-size: 1rem;
   }
 }
 @media only screen and (max-width: 700px) {
-  .questions-section {
+  .questions {
     width: 80%;
   }
 }
 @media only screen and (max-width: 425px) {
-  .questions-section {
+  .questions {
     width: 100%;
     padding: 1rem;
     height: 700px;
   }
-  .question-header-text {
+  .questions__content__header {
     font-size: 1.1rem;
     line-height: 25px;
   }
-  .question-container button {
+  .questions__content__item button {
     font-size: 0.7rem;
   }
-  .question-text {
+  .questions__content__item__text {
     font-size: 0.8rem;
     line-height: 25px;
   }
-  .questions-add-btn {
+  .questions__moreInfo__addBTN {
     font-size: 12px;
   }
 }

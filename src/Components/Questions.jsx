@@ -26,8 +26,8 @@ function Questions() {
 
   return (
     <>
-      <section className="questions-section">
-        <div className="questions-texts-container">
+      <section className="questions">
+        <div className="questions__content">
           {/* SECTION TITLE */}
           <h2 data-aos="fade-down" data-aos-offset="300">
             Perguntas frequentes
@@ -36,7 +36,7 @@ function Questions() {
           <p
             data-aos="fade-down"
             data-aos-offset="300"
-            className="question-header-text"
+            className="questions__content__header"
           >
             Aqui estão algumas de nossas perguntas mais frequentes. Se você
             tiver outras perguntas sinta-se à vontade para nos enviar um e-mail.
@@ -44,9 +44,9 @@ function Questions() {
 
           {/* QUESTIONS ITEMS */}
           {questionsList.map((item, index) => (
-            <div className="question-container" key={index}>
+            <div className="questions__content__item" key={index}>
               <hr />
-              <div className="button-container">
+              <div className="questions__content__item__btn">
                 <button
                   // IF INDEX === USESTATE INDEX IT OPENS
                   onClick={() => {
@@ -66,7 +66,11 @@ function Questions() {
                   }`}
                 ></i>
               </div>
-              <p className={`question-text ${num === index ? "opened" : null}`}>
+              <p
+                className={`questions__content__item__text ${
+                  num === index ? "opened" : null
+                }`}
+              >
                 {/* QUESTION RESPONSE */}
                 {item.res}
               </p>
@@ -76,9 +80,9 @@ function Questions() {
         </div>
 
         {/* "ADICIONAR" BUTTON*/}
-        <div className="moreInfo">
+        <div className="questions__moreInfo">
           <Link to="#download">
-            <button className="questions-add-btn">ADICIONAR</button>
+            <button className="questions__moreInfo__addBTN">ADICIONAR</button>
           </Link>
         </div>
       </section>
