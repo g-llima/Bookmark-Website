@@ -25,6 +25,10 @@ Setting up your project locally.
    ```sh
    npm install
    ```
+4. Run the project
+   ```sh
+   npm start
+   ```
 
 ### Preview
 
